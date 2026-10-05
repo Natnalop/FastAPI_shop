@@ -7,10 +7,10 @@ class CategoryRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def get_all(self) -> List[Category]:
+    def get_all(self) -> List[Category]: #все котегории хронящиес в базе данных
         return self.db.query(Category).all()
 
-    def get_but_id(self, category_id: int) -> Optional[Category]:
+    def get_by_id(self, category_id: int) -> Optional[Category]:
         return self.db.query(Category).filter(Category.id == category_id).first()
 
 
