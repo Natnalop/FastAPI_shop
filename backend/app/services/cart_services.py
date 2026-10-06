@@ -2,6 +2,7 @@ from sqlalchemy.orm import Session
 from typing import Dict, List, Optional
 from ..repositories.product_repository import ProductRepository
 from ..schemas.category import CategoryCreate, CategoryResponse, ProductCreate, ProductResponse, ProductListResponse
+from ..schemas.cart import CartItemCreate
 from ..repositories.category_repository import CategoryRepository
 from fastapi import HTTPException, status
 
